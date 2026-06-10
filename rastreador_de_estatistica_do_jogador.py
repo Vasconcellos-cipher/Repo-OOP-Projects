@@ -54,14 +54,14 @@ class GameCharacter:
             f"Mana: {self._mana}"
         )
         
-hero = GameCharacter("Kratos")
-print(hero)
+hero = GameCharacter(input("Insira O nome que você quer pro se jogador: "))
+print(f"\nNovo jogador: \n{hero}\n")
 
 hero.health -= 30
 hero.mana -= 10
-print()
+print("\n---------------------------\n")
 print(hero)
 
 hero.level_up()
-print()
+print("\n-------------------\n")
 print(hero)
