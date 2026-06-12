@@ -81,7 +81,6 @@ class MediaCatalogue:
 
 catalogue = MediaCatalogue()
 
-# Itens iniciais inseridos automaticamente (opcional)
 try:
     movie1 = Movie('The Matrix', 1999, 'The Wachowskis', 136)
     catalogue.add(movie1)
@@ -90,64 +89,64 @@ try:
 except (ValueError, MediaError) as e:
     pass
 
-# Loop principal do Menu
+# Main Menu Loop
 while True:
     print("\n" + "="*30)
-    print("      MENU DO CATÁLOGO")
+    print("      CATALOGUE MENU")
     print("="*30)
-    print("[ 1 ] Cadastrar novo Filme")
-    print("[ 2 ] Cadastrar nova Série")
-    print("[ 3 ] Exibir Catálogo Completo")
-    print("[ 4 ] Sair do Programa")
+    print("[ 1 ] Add New Movie")
+    print("[ 2 ] Add New TV Series")
+    print("[ 3 ] Display Full Catalogue")
+    print("[ 4 ] Exit Program")
     print("="*30)
     
-    opcao = input("Escolha uma opção: ").strip()
+    option = input("Choose an option: ").strip()
     
-    if opcao == '1':
-        print("\n--- CADASTRO DE NOVO FILME ---")
+    if option == '1':
+        print("\n--- ADD NEW MOVIE ---")
         try:
-            user_title = input("Digite o título do filme: ")
-            user_year = int(input("Digite o ano de lançamento: "))
-            user_director = input("Digite o nome do diretor: ")
-            user_duration = int(input("Digite a duração em minutos: "))
+            user_title = input("Enter movie title: ")
+            user_year = int(input("Enter release year: "))
+            user_director = input("Enter director's name: ")
+            user_duration = int(input("Enter duration in minutes: "))
             
-            novo_filme = Movie(user_title, user_year, user_director, user_duration)
-            catalogue.add(novo_filme)
-            print("\n✅ Filme adicionado com sucesso!")
+            new_movie = Movie(user_title, user_year, user_director, user_duration)
+            catalogue.add(new_movie)
+            print("\n✅ Movie added successfully!")
             
         except ValueError as e:
-            print(f'\n❌ Erro de Validação: {e}. O filme não foi adicionado.')
+            print(f'\n❌ Validation Error: {e}. The movie was not added.')
         except MediaError as e:
-            print(f'\n❌ Erro no Catálogo: {e}')
+            print(f'\n❌ Catalogue Error: {e}')
             
-    elif opcao == '2':
-        print("\n--- CADASTRO DE NOVA SÉRIE ---")
+    elif option == '2':
+        print("\n--- ADD NEW TV SERIES ---")
         try:
-            user_title = input("Digite o título da série: ")
-            user_year = int(input("Digite o ano de lançamento: "))
-            user_director = input("Digite o nome do diretor/criador: ")
-            user_duration = int(input("Digite a duração média dos episódios (min): "))
-            user_seasons = int(input("Digite a quantidade de temporadas: "))
-            user_episodes = int(input("Digite o total de episódios: "))
+            user_title = input("Enter TV series title: ")
+            user_year = int(input("Enter release year: "))
+            user_director = input("Enter director/creator's name: ")
+            user_duration = int(input("Enter average episode duration (min): "))
+            user_seasons = int(input("Enter number of seasons: "))
+            user_episodes = int(input("Enter total number of episodes: "))
             
-            # Cria e adiciona a série usando a classe TVSeries
-            nova_serie = TVSeries(user_title, user_year, user_director, user_duration, user_seasons, user_episodes)
-            catalogue.add(nova_serie)
-            print("\n✅ Série adicionada com sucesso!")
+            # Create and add the series using the TVSeries class
+            new_series = TVSeries(user_title, user_year, user_director, user_duration, user_seasons, user_episodes)
+            catalogue.add(new_series)
+            print("\n✅ TV Series added successfully!")
             
         except ValueError as e:
-            print(f'\n❌ Erro de Validação: {e}. A série não foi adicionada.')
+            print(f'\n❌ Validation Error: {e}. The TV series was not added.')
         except MediaError as e:
-            print(f'\n❌ Erro no Catálogo: {e}')
+            print(f'\n❌ Catalogue Error: {e}')
         
-    elif opcao == '3':
+    elif option == '3':
         print("\n" + "-"*40)
         print(catalogue)
         print("-"*40)
         
-    elif opcao == '4':
-        print("\nEncerrando o sistema... Até logo! 👋")
+    elif option == '4':
+        print("\nExiting the system... See you later! 👋")
         break
         
     else:
-        print("\n⚠️ Opção inválida! Digite 1, 2, 3 ou 4.")
+        print("\n⚠️ Invalid option! Please enter 1, 2, 3, or 4.")
