@@ -18,7 +18,7 @@ class Rectangle:
     def get_diagonal(self):
         return (self.width**2 + self.height**2) ** 0.5
 
-    # LÓGICA DO RETÂNGULO: Usa apenas 1 caractere para não distorcer a proporção
+    
     def get_picture(self):
         if self.width > 50 or self.height > 50:
             return "Too big for picture."
@@ -51,7 +51,7 @@ class Square(Rectangle):
         self.width = height
         self.height = height
     
-    # LÓGICA DO QUADRADO: Duplica o caractere ("##") para o terminal não deixar ele "magro"
+   
     def get_picture(self):
         if self.width > 50 or self.height > 50:
             return "Too big for picture."
