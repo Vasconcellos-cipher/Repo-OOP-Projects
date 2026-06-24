@@ -5,7 +5,7 @@ class Livro:
         self.ano = ano
         self.genero = genero
         self.disponivel = True
-        
+
     def mostrar_dados(self):
         print(f"Nome: {self.nome}")
         print(f"Autor: {self.autor}")
