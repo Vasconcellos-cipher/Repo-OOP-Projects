@@ -2,6 +2,7 @@ class Biblioteca:
     def __init__(self):
         self.livros = []
         self.usuarios = []
+<<<<<<< HEAD
 
     def adicionar_livro(self, livro):
         self.livros.append(livro)
@@ -10,12 +11,21 @@ class Biblioteca:
         self.usuarios.append(usuario)
 
     def listar_livros(self):
+=======
+        
+    def adicionar_livro(self, livro):
+        self.livros.append(livro)
+        
+        
+    def mostrar_livros(self):
+>>>>>>> 26d5e4eba81f3528322b2d4d85f49f8a923d28b6
         if len(self.livros) == 0:
             print("Nenhum livro cadastrado.")
 
         else:
             for livro in self.livros:
                 livro.mostrar_dados()
+<<<<<<< HEAD
                 print("===================")
 
     def listar_usuarios(self):
@@ -47,3 +57,6 @@ class Biblioteca:
 
         else:
             print("Este usuário não possui esse livro.")
+=======
+                print("===================")
+>>>>>>> 26d5e4eba81f3528322b2d4d85f49f8a923d28b6

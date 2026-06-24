@@ -1,4 +1,5 @@
 from livro import Livro
+<<<<<<< HEAD
 from usuario import Usuario
 from biblioteca import Biblioteca
 
@@ -8,6 +9,8 @@ biblioteca = Biblioteca()
 
 usuario1 = Usuario("Carlos", 25)
 
+=======
+>>>>>>> 26d5e4eba81f3528322b2d4d85f49f8a923d28b6
 
 livro1 = Livro(
     "Python para Iniciantes",
@@ -16,6 +19,7 @@ livro1 = Livro(
     "Tecnologia"
 )
 
+<<<<<<< HEAD
 livro2 = Livro(
     "Linux para Iniciantes",
     "João Silva",
@@ -48,3 +52,6 @@ biblioteca.devolver_livro(usuario1, livro1)
 
 print("\n===== LIVROS DA BIBLIOTECA =====")
 biblioteca.listar_livros()
+=======
+livro1.mostrar_dados()
+>>>>>>> 26d5e4eba81f3528322b2d4d85f49f8a923d28b6
